@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/chatvia",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

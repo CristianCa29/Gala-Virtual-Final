@@ -1,0 +1,70 @@
+<div class="contMain">
+
+    <app-aframe-gala3d></app-aframe-gala3d>
+
+    <div class="contVideo" *ngIf="videoVisible">
+        <youtube-player videoId="kU5XgySHW30" class="video" (ready)="onReady($event)" (stateChange)="onStateChange($event)" [width]="widthVideo" [height]="heightVideo">
+        </youtube-player>
+    </div>
+
+    <div class="continfo">
+        <a href="https://issuu.com/leon2204/docs/revista_final_fundepaz" target="_blank"><img src="assets/images/BOTON_REVISTA.png" class="botones" style="bottom: 80px; left: 50px"></a>
+        <a href="https://issuu.com/leon2204/docs/revista_final_fundepaz" target="_blank"><img src="assets/images/SEÑAL_REVISTA.png" class="botones" style="bottom: 80px; left: 50px"></a>
+        <a href="" target="_blank"><img src="assets/images/BOTON_PADRE.png" class="botones" style="bottom: 250px; left: 50px"></a>
+
+
+        <div class="contMenu">
+            <div class="menu" id="menu">
+                <div class="contBtns">
+                    <button class="btn" (click)="openWindowChat()" (mouseover)="chat = true" (mouseleave)="chat = false">
+            <!--<i class="ri-message-2-fill colorIcono"></i>-->
+            <img src="../../assets/images/BOTONES SUPERIORES-01.png" style="height: 40px;">
+          </button>
+                    <button class="btn" (click)="openDonatePayPal()" (mouseover)="donar = true" (mouseleave)="donar = false">
+                      <img src="../../assets/images/BOTONES SUPERIORES-02.png" style="height: 40px;">
+          </button>
+                    <a href="https://taxmatesflorida.com/FundePaz-Foto-con-el-Padre/" target="_blank" class="btn" (mouseover)="foto = true" (mouseleave)="foto = false">
+                        <!--<i class="ri-camera-fill colorIcono"></i>-->
+                        <img src="../../assets/images/BOTONES SUPERIORES-03.png" style="height: 40px;">
+                    </a>
+                    <a href="https://www.facebook.com/padreFernandoe" target="_blank" class="btn" (mouseover)="facebook = true" (mouseleave)="facebook = false">
+                        <!--<i class="ri-facebook-fill colorIcono"></i>-->
+                        <img src="../../assets/images/BOTONES SUPERIORES-04.png" style="height: 40px;">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCprEyngIS03StcZdQMUE29w" target="_blank" class="btn" (mouseover)="youtube = true" (mouseleave)="youtube = false">
+                        <!--<i class="ri-youtube-fill colorIcono"></i>-->
+                        <img src="../../assets/images/BOTONES SUPERIORES-05.png" style="height: 40px;">
+                    </a>
+                </div>
+                <div id="logout" class="flex-lg-column d-lg-block" (click)="logOut()" (mouseover)="logout = true" (mouseleave)="logout = false">
+                    <ul class="nav side-menu-nav justify-content-center">
+                        <li class="nav-item" ngbTooltip="logout">
+                            <a class="nav-link" id="pills-chat-tab" href="javascript: void(0);">
+                                <i class="ri-logout-circle-r-line colorIcono"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contDescrip">
+                <p class="descrip decripChat" *ngIf="chat">¡Chatee con Nosotros!</p>
+                <p class="descrip decripDonar" *ngIf="donar">Done Aquí</p>
+                <p class="descrip decripFoto" *ngIf="foto">Tómese la Foto con el Padre</p>
+                <p class="descrip decripFacebook" *ngIf="facebook">FaceBook</p>
+                <p class="descrip decripYoutube" *ngIf="youtube">YouTube</p>
+                <p class="descrip decripLogout" *ngIf="logout">LogOut</p>
+            </div>
+        </div>
+        <div class="contSecundario">
+            <div id="contChat" class="contChat" *ngIf="windowChatVisible">
+                <app-index></app-index>
+            </div>
+            <div class="contPayPal" *ngIf="payPalVisible">
+                <img class="qrDonacion" src="../../assets/images/QRDonaciones-FundePaz.jpeg">
+                <p class="textoDonacion">Con el Codigo QR o el botón pueden realizar aquí sus donaciones para apoyar lo proyectos de FundePazNYC.</p>
+
+                <a class="boton_personalizado marginTopLink" target="_blank" href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=TEM4MDWT6C4LE&source=url">Done Aquí!</a>
+            </div>
+        </div>
+    </div>
+</div>

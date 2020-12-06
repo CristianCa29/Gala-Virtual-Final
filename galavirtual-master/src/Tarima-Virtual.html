@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tarima virtual FundePazNYC</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    <script type="text/javascript" src="//player.wowza.com/player/latest/wowzaplayer.min.js"></script>
+</head>
+
+<body>
+    <app-root></app-root>
+    <!--Script para darle play o pause a un video-->
+    <!-- Paste the following into the <body> -->
+    <div id="MediaPlayerMiniPlayer" style="width:100%; height:0; padding:0 0 56.25% 0"></div>
+    <script type="text/javascript">
+        WowzaPlayer.create('MediaPlayerMiniPlayer', {
+            "license": "PLAY1-ch6Mt-GmHcX-eyfWd-dMnnB-bQU3u",
+            "title": "TV Station",
+            "description": "",
+            "sourceURL": "https://panel.streamingtv-mediacp.online:1936/8044/8044/playlist.m3u8",
+            "autoPlay": false,
+            "volume": "75",
+            "mute": false,
+            "loop": false,
+            "audioOnly": false,
+            "uiShowQuickRewind": true,
+            "uiQuickRewindSeconds": "30"
+        });
+    </script>
+</body>
+
+</html>

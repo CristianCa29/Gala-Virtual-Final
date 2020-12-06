@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gala virtual FundePazNYC</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+
+    <!--LIBRERIA AFRAME-->
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script type="text/javascript" src="//player.wowza.com/player/latest/wowzaplayer.min.js"></script>
+
+
+
+    <!--
+  <script src="js/collider-check.js"></script>
+  -->
+
+    <!---->
+    <!--**********************************************-->
+    <!--********************LIbrerias*****************-->
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <script src="https://taxmatesflorida.com/wp-includes/assets/dist/aframe-tooltip-component.js"></script>
+    <script src="https://taxmatesflorida.com/wp-includes/assets/dist/link-controls.js"></script>
+    <script src="https://taxmatesflorida.com/wp-includes/assets/dist/play-on-click.js"></script>
+    <script src="https://taxmatesflorida.com/wp-includes/assets/dist/hide-on-play.js"></script>
+    <script src="https://cdn.rawgit.com/mrturck/aframe-joystick/master/joystick.min.js"></script>
+    <script src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2Faframe-extras.min.js?v=1607176937458"></script>
+</head>
+
+<body>
+    <app-root></app-root>
+
+    <script type="text/javascript">
+        WowzaPlayer.create('MediaPlayerMiniPlayer', {
+            "license": "PLAY1-ch6Mt-GmHcX-eyfWd-dMnnB-bQU3u",
+            "title": "TV Station",
+            "description": "",
+            "sourceURL": "https://panel.streamingtv-mediacp.online:1936/8044/8044/playlist.m3u8",
+            "autoPlay": false,
+            "volume": "75",
+            "mute": false,
+            "loop": false,
+            "audioOnly": false,
+            "uiShowQuickRewind": true,
+            "uiQuickRewindSeconds": "30"
+        });
+    </script>
+    <script>
+    </script>
+</body>
+
+</html>

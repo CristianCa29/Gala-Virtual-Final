@@ -1,0 +1,107 @@
+<vg-player>
+    <!--Se crea la escena y se agrega el componente joystick-->
+    <a-scene joystick vr-mode-ui="enabled: false" raycaster="far: 100; objects: [link];" cursor="rayOrigin: mouse" inspector="https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js">
+        <a-assets>
+            <img id="tarima-streaming" src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FTARIMA-STREAMING_MARCAS_FUNDEPAZ.png?v=1606992125274" crossorigin="anonymous">
+            <!--Se crea la etiqueta video-->
+            <video id="videogala" src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FFundepaz%2020%20A%C3%B1os.mp4?v=1607025808276" width="160" height="90" crossOrigin="anonymous"></video>
+            <!--<>video id="Proyecto-Salvador" src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FProyecto%202021%20El%20Salvador%20Fundepaz%20NYC.mp4?v=1607190087698" width="160" height="90" crossOrigin="anonymous" autoplay loop="true" muted></video>
+            <video id="Proyecto-Republica-Dominicana" src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FProyectos%202021%20Rep%C3%BAblica%20Dominicana%20Fundepaz%20NYC_480p.mp4?v=1607191061653" width="160" height="90" crossOrigin="anonymous" autoplay
+                loop="true" muted></video>-->
+        </a-assets>
+
+        <!--Se crea una etiqueta a-assets dandole un id para identificar el modelo y llamando al modelo con src
+                ../../assets/models/hangar/hangar.gltf-->
+        <a-sky src="../assets/images/CoriolisNight4k.jpg" rotation="0 -130 0"></a-sky>
+        <a-asset-item id="GalaV" src="../assets/GalleryCompleteGLTF_NoPeople_texturesAt80_NewFloor2_NewWallFinal/Gallery_J.gltf"></a-asset-item>
+        <!--Se agrega la etiqueta a-gltf-model para llamar el modelo 3d-->
+        <a-gltf-model src="#GalaV" rotation="0 0 0"></a-gltf-model>
+
+
+        <!--**************Se estan agregando la señalización para indicar al usuario por donde desplazarse****************-->
+        <a-image src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FSE%C3%91AL_VIDEO.png?v=1607092246395" position="0.205  5.2 -14.83" geometry="" scale="4 1.5 1.3"></a-image>
+        <a-image src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FSE%C3%91AL_TARIMA.png?v=1607092746193" position="-18.83617 3.45688 -9.55095" geometry="" scale="3.5 1.5 1.3" material="" id="20-years" rotation="0 90 0"></a-image>
+        <a-image src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FFLECHA-HACIA-ADELANTE.png?v=1607096085763" position="-13.59719 0.020 -9.71961" geometry="" scale="1.5 2 1.5" material="" id="flecha-al-piso" rotation="-90 0 90"></a-image>
+        <a-image src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FFLECHA-HACIA-ADELANTE.png?v=1607096085763" position="-8.477 0.020 -9.720" geometry="" scale="1.5 2 1.5" material="" id="flecha-al-piso-1" rotation="-90 0 90"></a-image>
+        <a-image src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FFLECHA-HACIA-ADELANTE.png?v=1607096085763" position="8.359 0.02 -9.72" geometry="" scale="1.5 2 1.5" material="" id="piso-2" rotation="-90 0 -90"></a-image>
+        <a-image src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FFLECHA-HACIA-ADELANTE.png?v=1607096085763" position="13.61755 0.02 -9.72" geometry="" scale="1.5 2 1.5" material="" id="piso-3" rotation="-90 0 -90"></a-image>
+        <a-image src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FFLECHA-IZQUIERDA.png?v=1607096088552" position="-4.33644 0.6104 -14.70534" geometry="" scale="" material="" id="Izquierda-1" rotation=""></a-image>
+        <a-image src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FFLECHA-DERECHA.png?v=1607096082664" position="4.49981 0.6104 -14.70534" geometry="" scale="" material="" id="derecha-1" rotation=""></a-image>
+        <a-image src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FFLECHA-DERECHA.png?v=1607096082664" position="8.69382 2.17748 -3.58632" geometry="" scale="" material="" id="derecha-2" rotation="0 -90 0"></a-image>
+        <a-image src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FFLECHA-DERECHA.png?v=1607096082664" position="14.95236 2.17748 -3.4283" geometry="" scale="" material="" id="derecha-3" rotation="0 -90 0"></a-image>
+        <a-image src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FFLECHA-DERECHA.png?v=1607096082664" position="20.77142 2.17748 -4.45071" geometry="" scale="" material="" id="derecha-4" rotation="0 -90 0"></a-image>
+        <a-image src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FFLECHA-DERECHA.png?v=1607096082664" position="0.99605 2.17748 -2.6415" geometry="" scale="" material="" id="derecha-5" rotation="0 -90 0"></a-image>
+        <a-image src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FFLECHA-DERECHA.png?v=1607096082664" position="-3.07394 2.17748 -3.50013" geometry="" scale="" material="" id="derecha-6" rotation="0 -90 0"></a-image>
+        <a-image src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FFLECHA-DERECHA.png?v=1607096082664" position="-9.05518 2.17748 -3.50013" geometry="" scale="" material="" id="derecha-7" rotation="0 -90 0"></a-image>
+        <a-image src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FFLECHA-DERECHA.png?v=1607096082664" position="-15.05841 2.17748 -3.50013" geometry="" scale="" material="" id="derecha-8" rotation="0 -90 0"></a-image>
+        <a-image src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FFLECHA-DERECHA.png?v=1607096082664" position="15.57197 2.17748 -3.46312" geometry="" scale="" material="" id="derecha-9" rotation="0 -90 0"></a-image>
+        <a-image src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FFLECHA-DERECHA.png?v=1607096082664" position="9.57339 2.17748 -3.46312" geometry="" scale="" material="" id="derecha-10" rotation="0 -90 0"></a-image>
+        <a-image src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FFLECHA-DERECHA.png?v=1607096082664" position="3.57224 2.17748 -3.46312" geometry="" scale="" material="" id="derecha-11" rotation="0 -90 0"></a-image>
+        <a-image src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FFLECHA-DERECHA.png?v=1607096082664" position="-2.422 2.17748 -3.46312" geometry="" scale="" material="" id="derecha-12" rotation="0 -90 0"></a-image>
+        <a-image src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FFLECHA-DERECHA.png?v=1607096082664" position="-8.42042 2.17748 -3.46312" geometry="" scale="" material="" id="derecha-13" rotation="0 -90 0"></a-image>
+        <!--se agrega una etiqueta entity para la posicion, rotacion y el manejo del video-->
+
+        <!--**************Se agregan geometrias en el borde del marco de cada fotografia para numerarlas****************-->
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="4.249 4.693 -14.96" id="no1" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="7.295 4.693 -14.96" id="no2" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="9.847 4.693 -14.96" id="no3" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="12.598 4.693 -14.96" id="no4" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="15.34867 4.693 -14.96" id="no5" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="18.08184 4.693 -14.96" id="no6" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="20.74 4.693 -12.75335" id="no7" rotation="0 -90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="20.74 4.693 -10.25942" id="no8" rotation="0 -90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="20.74 4.693 -7.81328" id="no9" rotation="0 -90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="20.74 3.3797 -1.32472" id="no10" rotation="0 -90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="20.74 3.3797 1.71738" id="no11" rotation="0 -90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="20.74 3.3797 4.71169" id="no12" rotation="0 -90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="20.74 3.3797 7.70835" id="no13" rotation="0 -90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="20.7416 3.3717 10.70069" id="no14" rotation="0 -90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="15.58409 4.13246 4.67259" id="no15" rotation="0 90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="15.04766 4.12349 6.28263" id="no16" rotation="0 -90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="15.048 3.00504 0.80949" id="no17" rotation="0 90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="14.10249 2.76452 -1.8332" id="no18" rotation="0 -90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="10.44039 2.94421 0.95223" id="no19" rotation="0 90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="10.11402 2.95301 -1.81728" id="no20" rotation="0 -90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="9.08374 4.12349 4.67059" id="no21" rotation="0 -90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="9.57851 4.12349 6.26654" id="no22" rotation="0 90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="2.42574 2.95562 0.81563" id="no23" rotation="0 90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="3.416 4.12349 6.33526" id="no24" rotation="0 90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="2.37339 2.9248 0.80395" id="no25" rotation="0 90 0" material="color: white" visible=""></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="2.12158 2.73009 -1.8041" id="no26" rotation="0 -90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="3.10446 4.0748 4.7114" id="no27" rotation="0 -90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="-1.62378 2.73009 0.84525" id="no28" rotation="0 90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="-1.85165 2.88912 -1.89964" id="no29" rotation="0 -90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="-2.99099 4.11352 4.72652" id="no30" rotation="0 -90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="-8.58265 4.13597 6.3242" id="no31" rotation="0 90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="-8.96199 4.08427 6.30054" id="no32" rotation="0 -90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="-9.66721 2.90887 0.83499" id="no33" rotation="0 90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="-9.94005 2.73535 -1.81325" id="no34" rotation="0 -90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="-13.57854 2.74635 0.84621" id="no35" rotation="0 90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="-13.80232 2.90523 -1.83129" id="no36" rotation="0 -90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="-14.55587 4.06892 4.66839" id="no37" rotation="0 90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="-14.86109 4.06728 6.29923" id="no38" rotation="0 -90 0" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="-20.33933 2.76463 12.90777" id="no39" rotation="0 90 0" material="color: #0004ff"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="-20.23323 2.7423 6.98167" id="no40" rotation="0 90 0" material="color: #0004ff"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="-20.32453 2.7281 0.87874" id="no41" rotation="0 90 0" material="color: #0004ff"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="-17.65015 4.66565 -14.95822" id="no42" rotation="0 0 90" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="-14.95849 4.66565 -15.06331" id="no43" rotation="0 0 90" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="-12.202 4.66565 -15.06331" id="no44" rotation="0 0 90" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="-9.508 4.66565 -15.06331" id="no45" rotation="0 0 90" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="-6.795 4.66565 -15.06331" id="no46" rotation="0 0 90" material="color: white"></a-entity>
+        <a-entity geometry="primitive: plane" scale="0.5 0.5 0.5" position="-4.092 4.66565 -15.06331" id="no47" rotation="0 0 90" material="color: white"></a-entity>
+
+
+        <!--Video 20 años FundePazNYC-->
+        <a-entity id="video1" material="shader: flat; src: #videogala" geometry="primitive: plane; width: 160; height: 90;" position="0.041 2.900 -15" rotation="0 0 0" scale="0.040 0.040 0" play-on-click visible="true"> </a-entity>
+
+        <!--Video Proyecto Republica Dominicana-->
+        <!--<a-entity id="video2" material="shader: flat; src: #Proyecto-Salvador" geometry="primitive: plane; width: 160; height: 90;" position="12.12 2.900 14.2" rotation="0 -180 0" scale="0.040 0.040 0" play-on-click visible="false"> </a-entity>-->
+        <!--Video Proyecto El Salvador-->
+        <!--<a-entity id="video3" material="shader: flat; src: #Proyecto-Republica-Dominicana" geometry="primitive: plane; width: 160; height: 90;" position="0.192 2.900 14.2" rotation="0 -180 0" scale="0.040 0.040 0" play-on-click visible="false"> </a-entity>-->
+
+        <!--se agrega una etiqueta entity para la camara y los controlos del joystick-->
+        <a-entity camera id="camera" position="0 1.6 -9" look-controls wasd-controls></a-entity>
+        <a-link href="../../src/Tarima-Virtual.html" position="-19.374 1.400 -9.600 " rotation="0 90 0" image="#tarima-streaming"></a-link>
+        <!--<a-link (click)="invocarStreaming()" position="-19.374 1.400 -9.600 " rotation="0 90 0" image="#tarima-streaming"></a-link>-->
+    </a-scene>
+</vg-player>
