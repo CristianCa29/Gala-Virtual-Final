@@ -52,7 +52,7 @@ export class PrincipalComponent implements OnInit {
     const sesion = localStorage.getItem('sesion');
 
     if (sesion === 'false' || sesion === null) {
-      this.router.navigate(['/login']);
+      this.router.navigate(['/signup']);
       // this.router.navigate(['/account/login']);
     }
   }
@@ -128,7 +128,7 @@ export class PrincipalComponent implements OnInit {
     localStorage.removeItem('v');
     localStorage.setItem('sesion', 'false');
     this.authService.logout();
-    this.router.navigate(['/login']);
+    this.router.navigate(['/signup']);
     // this.router.navigate(['/account/login']);
   }
 }

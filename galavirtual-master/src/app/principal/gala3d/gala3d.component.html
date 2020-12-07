@@ -17,6 +17,13 @@
         <!--Se agrega la etiqueta a-gltf-model para llamar el modelo 3d-->
         <a-gltf-model src="#GalaV" rotation="0 0 0"></a-gltf-model>
 
+        <!--*****Se agrega una grid y se coloca a la altura de la vista humana*****-->
+        <a-grid static-body visible="false" position="0 1.6 0"> </a-grid>
+        <!--*****Se agrega las cajas alrededor del mes para general la colisión-->
+        <a-box id="wall_1" color="grey" width="15" height="5" position="-0.854 2.5 -14.889" static-body="sphereRadius: NaN" visible="false" scale="2.919 1 1"></a-box>
+        <a-box id="wall_2" color="grey" width="7" height="5" position="20.975 2.178 -0.514" static-body="sphereRadius: NaN" rotation="0 90 0" visible="false" scale="4.370 1 1"></a-box>
+        <a-box id="wall_3" color="grey" width="15" height="5" position="-0.215 2.5 14.162" static-body="sphereRadius: NaN" visible="false" scale="2.919 1 1"></a-box>
+        <a-box id="wall_4" color="grey" width="15" height="5" position="-20.338 2.5 -0.54714" static-body="sphereRadius: NaN" visible="false" rotation="0 -90 0" scale="2.16778 1 1"></a-box>
 
         <!--**************Se estan agregando la señalización para indicar al usuario por donde desplazarse****************-->
         <a-image src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FSE%C3%91AL_VIDEO.png?v=1607092246395" position="0.205  5.2 -14.83" geometry="" scale="4 1.5 1.3"></a-image>
@@ -39,6 +46,7 @@
         <a-image src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FFLECHA-DERECHA.png?v=1607096082664" position="3.57224 2.17748 -3.46312" geometry="" scale="" material="" id="derecha-11" rotation="0 -90 0"></a-image>
         <a-image src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FFLECHA-DERECHA.png?v=1607096082664" position="-2.422 2.17748 -3.46312" geometry="" scale="" material="" id="derecha-12" rotation="0 -90 0"></a-image>
         <a-image src="https://cdn.glitch.com/63a6bc1d-ae82-4987-a511-4d8685401ffd%2FFLECHA-DERECHA.png?v=1607096082664" position="-8.42042 2.17748 -3.46312" geometry="" scale="" material="" id="derecha-13" rotation="0 -90 0"></a-image>
+
         <!--se agrega una etiqueta entity para la posicion, rotacion y el manejo del video-->
 
         <!--**************Se agregan geometrias en el borde del marco de cada fotografia para numerarlas****************-->
@@ -100,7 +108,8 @@
         <!--<a-entity id="video3" material="shader: flat; src: #Proyecto-Republica-Dominicana" geometry="primitive: plane; width: 160; height: 90;" position="0.192 2.900 14.2" rotation="0 -180 0" scale="0.040 0.040 0" play-on-click visible="false"> </a-entity>-->
 
         <!--se agrega una etiqueta entity para la camara y los controlos del joystick-->
-        <a-entity camera id="camera" position="0 1.6 -9" look-controls wasd-controls></a-entity>
+        <!--<a-entity camera id="camera" position="0 1.6 -9" look-controls wasd-controls></a-entity>-->
+        <a-entity camera id="player" userHeight="1.6" look-controls wasd-controls kinematic-body="radius:0.5 mass:0" position="0 1.6 -9"></a-entity>
         <a-link href="../../src/Tarima-Virtual.html" position="-19.374 1.400 -9.600 " rotation="0 90 0" image="#tarima-streaming"></a-link>
         <!--<a-link (click)="invocarStreaming()" position="-19.374 1.400 -9.600 " rotation="0 90 0" image="#tarima-streaming"></a-link>-->
     </a-scene>
